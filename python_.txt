@@ -1,0 +1,177 @@
+# create game_stop data
+
+import pandas 
+
+employees = pandas.DataFrame( [  ( 12345, 'Anthony', 'Taplett', "2020-08-23",  'Manager',           25 ,  'ant@gator.uhd.edu',    8 , "(832) 911 - 3110" ) ,
+                                 ( 67890, 'William', 'Pham',    '2020-12-10',  'Supervisor',        15 ,  'will@gmail.com',       5 , "[713] 444 - 6666" ) ,
+                                 ( 54321, 'Barack',  'Obama',   '2020-10-31',  'Cashier',           10 ,  'obamacare@aol.com',    3 , "{281] 999 - 0000" ) ,
+                                 ( 24680, 'Mike',    'Tyson',   '2025-02-14',  'Assistant Manager', 20 ,  'tysonfight@arena.com', 4 , "{346) 123 - 4567" ) ,
+                                 ( 13579, 'Donald',  'Trump',   '2025-03-16',  'Cashier',           10 ,  'trump@whitehouse.com', 6 , "[911} 246 - 1357" ) ,
+                                 ( 11111, 'Larry',   'Bird',    "2010-12-12",  'Supervisor',        15 ,  'bird@celtics.com',     8 , "{242] 111 - 4444" ) ,
+                                 ( 22222, 'Patrick', 'Mahomes', '2015-07-15',  'Assistant Manager', 20 ,  'patrick@chiefs.com',   3 , "[946} 898 - 0909" ) ,
+                                 ( 33333, 'Snoop',   'Dogg',    '2019-05-09',  'Manager',           25 ,  'snoop@deathrow.com',   5 , "(721] 222 - 1212" ) ,
+                                 ( 44444, 'Jose',    'Altuve',  '2022-09-02',  'Cashier',           10 ,  'jose@astros.com',      8 , "[654) 456 - 4321" ),
+                                 ( 55555, 'Simone',  'Biles',   '2018-08-18',  'Cashier',           10 ,  'simone@instagram.com', 5 , "{321) 980 - 0123" ) ] ,
+
+             columns = (  'iD' ,  'First name' ,  'Last name' ,  'Hire'  ,  "Position" ,  "Pay" ,  "Email" ,  'Store nO' ,  'Phone' ) )
+
+
+
+
+members = pandas.DataFrame( [ ( 33890 ,	'Sarah'	    ,  'James'	      ,  '2020-04-07'  ,	999   ,  '[713} 411 - 7000'	 ,  'ant@gator.uhd.edu'    ,  6 ) ,
+                              ( 33885 ,	'Elizabeth' ,  'Moore'	      ,  "1980-03-16"  ,	10000 ,	 '(832] 985 - 2432'	 ,  'eliz@gmail.com'       ,  3 ) ,
+                              ( 33900 ,	'Michelle'	,  'Obama'	      ,  "1776-07-04"  ,	22000 ,	 '{346} 604 - 1234'	 ,  'mich@yahoo.com'       ,  5 ) ,
+                              ( 33777 ,	'Mario'	    ,  'Lopez'	      ,  "2025-03-16"  ,	55	  ,  '[281) 135 - 2468'  ,  'mario@savedbell.com'  ,  8 ) ,
+                              ( 33666 ,	'Jackie'	,  'Chan'	      ,  '2025-02-14'  ,	2000  ,	 '{713] 111 - 9999'  ,  'chan@rushhour.com'    ,  4 ) ,
+                              ( 33111 ,	'Denzel'	,  'Washington'   ,  '1773-12-16'  ,	100	  ,  '[255) 333 - 1212'	 ,  'denzel@hurricane.com' ,  3 ) ,
+                              ( 33222 ,	'Tom'	    ,  'Hanks'	      ,  "1862-03-10"  ,	200	  ,  '(522} 656 - 7777'	 ,  'tom@big.com'          ,  4 ) ,
+                              ( 33444 ,	'Nicole'	,  'Kidman'	      ,  "1997-07-04"  ,	300	  ,  '{366] 123 - 4567'	 ,  'nicole@others.com'    ,  5 ) ,
+                              ( 33555 ,	'Julia'	    ,  'Roberts'	  ,  '1620-12-11'  ,	400	  ,  '{633} 765 ~ 4321'	 ,  'julia@oceans.com'     ,  6 ) ,
+                              ( 33999 ,	'Reese'     ,  'Witherspoon'  ,	 "1941-12-07"  ,	500	  ,  "[111] 888 ~ 0000"	 ,  "reese@blonde.com"     ,  8 ) ] ,
+
+    
+        columns = ( "iD" ,	'First_name' ,	"Last_name" ,	'Sign_up'	 , "Rewards_points" ,	'pHone' ,	"e_MaiL" ,	'sToRe_n0' ) )
+
+
+
+products = pandas.DataFrame( [ ( 54321 ,  'niNtenDO sWitcH 2' 	               ,  'console'	     ,  449.99 ,	50	 , '{713] 999 - 0000'  ,  3	 , "One Main StreeT"	       , 77002	 ,  'Houston' ) ,
+                               ( 98765 ,  'street fighter 2' 	               ,  'Video game'	 ,  29.99  ,	20	 , '(713} 643 - 9070'  ,  8	 , '770 GulfGate Center mALL'  , 77087	 ,  'Dallas' ) ,
+                               ( 33456 ,  'Black Wireless'  	               ,  'contRoLLer'	 ,  179.99 ,	30	 , "[713} 385 - 6789"  ,  5	 , "2525 Wayside Drive"	       , 77032	 ,  'Austin' ) ,
+                               ( 13579 ,  'Yu-Gi-Oh!'  	                       ,  'Trading card' ,	24.99  ,	250	 , '(281] 123 - 2468'  ,  3	 , '777 Hollywood Blvd'	       , 77055	 ,  'San Antonio' ) ,
+                               ( 24680 ,  'Batman' 	                           ,  'collectible'	 ,  24.99  ,	1	 , "[281) 123 - 1357"  ,  6	 , "999 MLK"	               , 77021	 ,  'Houston' ) ,
+                               ( 22000 ,  'PlayStation 5' 	                   ,  'consoleS'	 ,  449.99 ,	25	 , '(281] 123 - 2468'  ,  4	 , '777 Hollywood Blvd'	       , 77055	 ,  'San Antonio' ) ,
+                               ( 33000 ,  'Racing wheel' 	                   ,  'Accessories'	 ,  329.99 ,	15	 , "[281) 123 - 1357"  ,  6	 , "999 MLK"                   , 77021	 ,  'Houston' ) ,
+                               ( 44000 ,  'Nintendo eshop' 	                   ,  'Gift Cards'	 ,  70.00  ,	100	 , '(713} 643 - 9070'  ,  8	 , "770 GulfGate Center mALL"  , 77087	 ,  'Dallas' ) ,
+                               ( 55000 ,  'Indians Jones and the Great Circle' ,  'gameS'	     ,  69.99  ,	40	 , "[713} 385 - 6789"  ,  5	 , "2525 Wayside Drive"	       , 77032	 ,  'Austin' ) ,
+                               ( 66000 ,  'xBox series X' 	                   ,  'conSoles'	 ,  499.99 ,	25	 , '(281] 123 - 2468'  ,  3	 , '777 Hollywood Blvd'	       , 77055	 ,  'San Antonio' ) ] ,
+
+
+            columns = ( 'Product NO' , "Name" ,	'category' ,	"pRiCe" ,	'quantity' ,	"Phone" ,	'Store no' ,	"Street" , 'ziP CoDe' ,	"ciTY" ) )
+
+
+
+sales = pandas.DataFrame( [ ( 24000 ,	'2020-12-02'  ,  '10:45:33'  ,	'Cash'	 , 33885  ,	 111.11	 ,  67890 ) ,
+                            ( 24685 ,	"1980-03-16"  ,  "15:55:03"  ,	'Gift'	 , 0	  ,  40.05	 ,  54321 ) ,
+                            ( 24690 ,	'2o13-02-14'  ,  '03:44:01'  ,	'Debit'	 , 33777  ,	 556.92	 ,  12345 ) ,
+                            ( 24555 ,	"2025-03-16"  ,  "10:10:10"  ,	'Cash'	 , 0	  ,  50	     ,  13579 ) ,
+                            ( 24333 ,	"2025-02-14"  ,  '12:12:12'  ,	'Debit'  , 33666  ,	 999	 ,  24680 ) ,
+                            ( 25000 ,	'1865-02-01'  ,  "18:00:08"  ,	'Combo'	 , 33444  ,	 69.99	 ,  11111 ) ,
+                            ( 25111 ,	"2022-07-12"  ,  '11:30:33'  ,	'Credit' , 33885  ,	 1009.97 ,	22222 ) ,
+                            ( 25222 ,	'1492-08-03'  ,  "14:55:22"  ,	'Credit' , 0	  ,  119.98	 ,  33333 ) ,
+                            ( 25333 ,	"1945-08-06"  ,  '16:16:58'  ,	'Combo'	 , 0	  ,  449.99	 ,  44444 ) ,
+                            ( 25444 ,	'1997-08-31'  ,  "17:45:15"  ,	'Cash'	 , 33666  ,	 70.00	 ,  67890 ) ] ,
+
+
+    
+     columns = (  "iD" ,	'Date' , "Time" ,	"Payment Type" ,	'Member iD' ,	"Amount" ,	'Employee ID' ) )
+
+
+
+
+#### import data into neo4j
+
+from neo4j import GraphDatabase
+
+nEo4j_coMMands_List = [];
+
+# I need format : " + str(i[0]) + "  << 4 numbered data   &  '" + str(i[0]) + "'  >> 4 text data 
+
+for i in employees_list:
+    neo4j_create_statement = "create (:Employees { iD:" + str(i[0]) + " ,  First_name:  '" + str(i[1]) + "' ,  Last_name:'" + str(i[2]) + "' ,  Hire: '" + str(i[3]) + "'  ,  Position:'" + str(i[4]) + "' ,  Pay: " + str(i[5]) + " ,  Email:'" + str(i[6]) + "' ,  Store_nO: " + str(i[7]) + " ,  Phone:'" + str(i[8]) + "' } ) "    
+    nEo4j_coMMands_List.append( neo4j_create_statement )
+
+
+for i in members_list:
+    neo4j_create_statement = "create (:Members { iD:" + str(i[0]) + " ,	First_name: '" + str(i[1]) + "' ,	Last_name:'" + str(i[2])  + "' ,	Sign_up:'" + str(i[3]) + "'	, Rewards_points:" + str(i[4]) +  " ,  pHone:'" + str(i[5]) + "' ,	e_MaiL:'" + str(i[6]) + "' , sToRe_n0:" + str(i[7]) + "  } ) "    
+    nEo4j_coMMands_List.append( neo4j_create_statement )
+
+
+for i in products_list:
+    neo4j_create_statement = "create (:Products { Product_nO:" + str(i[0]) + " , Name:'" + str(i[1]) + "' ,	category:'" + str(i[2]) + "' ,	pRiCe:" + str(i[3]) + " ,	quantity:" + str(i[4]) + " , Phone:'" + str(i[5]) + "' ,	Store_n0:" + str(i[6]) + " ,	Street:'" + str(i[7]) + "' , ziP_CoDe:" + str(i[8]) + " ,	ciTY:'" + str(i[9]) +  "' } ) "    
+    nEo4j_coMMands_List.append( neo4j_create_statement )
+
+
+for i in sales_list:
+    neo4j_create_statement = "create (:Sales { iD:" + str(i[0]) + " ,	Date:'" + str(i[1]) + "' , Time:'" + str(i[2]) + "' ,	Payment_tYpe:'" + str(i[3]) + "' ,	Member_iD:" + str(i[4]) + " ,	Amount:" + str(i[5]) + " ,	Employee_Id:" + str(i[6]) + " } ) "    
+    nEo4j_coMMands_List.append( neo4j_create_statement )
+
+
+
+
+
+def execute_transactions( nEo4j_coMMands_List ):
+        data_base_connection = GraphDatabase.driver(uri = "bolt://localhost:7687", auth=("neo4j", "j45$$45J"))
+        session = data_base_connection.session()    
+        for i in  nEo4j_coMMands_List:
+            session.run(i)
+
+execute_transactions( nEo4j_coMMands_List )
+
+
+from neo4j import GraphDatabase
+
+
+unique_store_n0 = [ "match ( m:Members ) return distinct m.sToRe_n0" ]  
+
+unique_employee_id = [ "match ( s:Sales ) return distinct s.Employee_Id" ]  
+
+unique_member_id = [ "match ( s:Sales ) return distinct s.Member_iD" ]  
+
+
+def execute_transactions_2oo( nEo4j_coMMands_List_2oo ):
+        data_base_connection = GraphDatabase.driver(uri = "bolt://localhost:7687", auth=("neo4j", "j45$$45J"))
+        session = data_base_connection.session()  
+        result_list = []
+   
+    
+        for i in nEo4j_coMMands_List_2oo:
+            results = session.run( i )
+            result_list = [ x[ 0 ] for x in results ]
+
+            
+        return result_list
+
+
+
+execute_transactions_2oo( unique_store_n0 ) 
+      
+execute_transactions_2oo( unique_employee_id ) 
+      
+execute_transactions_2oo( unique_member_id )
+
+
+storeS_n0_list = execute_transactions_2oo( unique_store_n0 )
+
+employeeS_iD_list = execute_transactions_2oo( unique_employee_id ) 
+
+memBerS_id_list = execute_transactions_2oo( unique_member_id )
+
+relationship = []
+
+for w in storeS_n0_list:
+
+    relationship.append( " MATCH ( Employees { Store_nO: " + str(w) +  " } ) \
+                           match ( m:Members { sToRe_n0: " + str(w) + " } ) \
+                           merge ( Employees )-[ :Works_aT_Preferred_Store ]->( m ) " )
+
+for j in employeeS_iD_list:
+
+    relationship.append( " MATCH ( e:Employees { iD: " + str(j) + " } ) \
+                           match ( s:Sales { Employee_Id: " + str(j) + " } ) \
+                           merge ( e )-[ :Carried_oUT ]->( s ) " )
+
+for T in memBerS_id_list:
+
+    relationship.append( " match ( m:Members { iD: " + str(T) + " } ) \
+                           match ( s:Sales { Member_iD: " + str(T) + " } ) \
+                           merge ( m ) - [ :Member_Purchased ]  - > ( s ) " )
+
+
+
+
+
+execute_transactions_2oo( relationship )
+
+
+
+
